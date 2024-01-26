@@ -1,0 +1,24 @@
+.pane {
+    border-style: solid;
+    border-color: #fff;
+    border-width: 1px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    /* box-shadow: 2px 2px 2px #dddddd; */
+}
+
+.header {
+    margin: 5px;
+    padding-left: 10px;
+    padding-top: 4px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+
+
+
+
+
