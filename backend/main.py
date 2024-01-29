@@ -21,6 +21,8 @@ import shutil
 import base64
 from io import BytesIO
 
+import argparse
+
 os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
 
 
@@ -323,9 +325,13 @@ class PrompterModelWrapper:
 
 
 if __name__ == '__main__':
-    custom_diffusion_model = DiffusionModelWrapper()
-    inpainting_model = InpaintingDiffusionModelWrapper()
-    prompter_model = PrompterModelWrapper()
+    parser = argparse.ArgumentParser(prog='PromptCharm Backend', description='This is the backend program of PromptCharm')
+    parser.add_argument("--seed", default=2024, help="random seed", type=int)
+    args = parser.parse_args()
+
+    custom_diffusion_model = DiffusionModelWrapper(random_seed=args.seed)
+    inpainting_model = InpaintingDiffusionModelWrapper(random_seed=args.seed)
+    prompter_model = PrompterModelWrapper(random_seed=args.seed)
     app = Flask("Penguin")
 
 

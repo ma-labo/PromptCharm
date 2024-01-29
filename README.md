@@ -15,13 +15,55 @@ This repository contains the official implementation of our related paper:
 
 ### Environments Set-up
 
-#### Python >= 3.6
+##### Python >= 3.6
 
 *We suggest use virtual environment to avoid messing up your own environments.*
 
-Please follow `backend/README.md` for details.
+Create virtual environments (optional)
+
+~~~sh
+$ cd ./backend
+$ python -m venv ./venv
+$ source ./venv/bin/activate
+~~~
+
+Install
+
+```shell
+pip install -r requirements.txt
+
+git clone -b penguin https://github.com/paulwong16/ecco.git
+cd ecco
+pip install -e . 
+
+cd ..
+git clone https://github.com/YuhengHuang42/daam.git
+cd daam
+pip install -e .
+cd ..
+```
+---
 
 #### NPM >= 7
+
+[Download](https://drive.google.com/file/d/1wJxDLRNo-wZRV0xb-AhAIf4imd1XSyS4/view?usp=share_link) pre-mined images from diffusion_db and organize them as the followings. You can also follow the notebook in `./backend` to do it by yourself.
+
+```tree
+├── web/dashboard
+│   ├── public
+│   ├── src
+│   │   └── data
+│   │       │── diffusion_db
+│   │       │   │── 0.jpg
+│   │       │   │── 1.jpg
+│   │       │   └── ...
+│   │       └── ...
+│   └── ...
+├── backend
+└── ...
+```
+
+Install
 
 ~~~sh
 $ cd ./web/dashboard
@@ -41,7 +83,7 @@ Copy the url and open it in browser.
 
 ~~~sh
 $ cd ./backend
-$ python main.py
+$ python main.py --seed [YOUR RANDOM SEED]
 ~~~
 
 
