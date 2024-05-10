@@ -32,12 +32,12 @@ Install
 ```shell
 pip install -r requirements.txt
 
-git clone -b penguin https://github.com/paulwong16/ecco.git
+git clone -b promptcharm https://github.com/paulwong16/ecco.git
 cd ecco
 pip install -e . 
 
 cd ..
-git clone https://github.com/YuhengHuang42/daam.git
+git clone https://github.com/paulwong16/daam.git
 cd daam
 pip install -e .
 cd ..
